@@ -16,14 +16,14 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-west-2"
+  region = "eu-central-1"
 }
 
 resource "random_pet" "sg" {}
 
 data "aws_ami" "ubuntu" {
   most_recent = true
-
+  
   filter {
     name   = "name"
     values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
